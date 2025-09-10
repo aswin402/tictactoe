@@ -1,0 +1,150 @@
+//variables==================================
+// background: #0f0c29;  /* fallback for old browsers */
+// background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+// background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+
+$gradient-color:  linear-gradient(300deg,deepskyblue,darkviolet,blue);
+$btn-gradient-color: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
+$primary-color: rgb(188, 188, 192);
+$secondary-color: #ffc3a0;
+$white-color: #ffffff;
+$black-color: #000000;
+$font-family: 'Arial', sans-serif;
+
+
+
+
+
+* {
+      margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       
+}
+
+body {
+    background: $gradient-color;
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+    text-align: center;
+    
+  .container {
+     height: 70vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     .game {
+            height: 60vmin;
+            width: 60vmin;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5vmin;
+            justify-content: center;
+            .box {
+            height: 18vmin;
+            width: 18vmin;
+            border-radius: 1rem;
+            border: none;
+            box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+            font-size: 8vmin;
+            color: white;
+            background-color: $white-color;
+              &:hover {
+            background-color: $primary-color;
+            cursor: pointer;
+            }
+          }
+        }
+     }
+      #reset {
+            @extend .btn-grad;
+          }
+
+
+    .popup{
+      background: $gradient-color;
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 2rem;
+      font-size: 12vmin;
+        #new-btn {
+                  display: block;
+                  margin: 0 auto;
+                  @extend .btn-grad;
+                    }
+      #msg{
+        color: $white-color;
+        text-align: center;
+        font-size: 1em;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+    }
+
+   
+}
+
+// Hide class for popup
+.hide {
+    display: none !important;
+}
+
+
+
+
+//animations=================================
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+//buttons====================================
+.btn-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-grad {
+            background-image: $btn-gradient-color;
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: $black-color;   
+            box-shadow: 0 0 20px $white-color;
+            border-radius: 50px;
+            display: block;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            &:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: $white-color;
+            text-decoration: none;
+          }
+          }
+

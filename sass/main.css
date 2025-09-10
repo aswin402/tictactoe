@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+  text-align: center;
+}
+body .container {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container .game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5vmin;
+  justify-content: center;
+}
+body .container .game .box {
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  font-size: 8vmin;
+  color: white;
+  background-color: #ffffff;
+}
+body .container .game .box:hover {
+  background-color: rgb(188, 188, 192);
+  cursor: pointer;
+}
+body .popup {
+  background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 12vmin;
+}
+body .popup #new-btn {
+  display: block;
+  margin: 0 auto;
+}
+body .popup #msg {
+  color: #ffffff;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hide {
+  display: none !important;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.btn-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-grad, body #reset, body .popup #new-btn {
+  background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA 51%, #1FA2FF 100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: #000000;
+  box-shadow: 0 0 20px #ffffff;
+  border-radius: 50px;
+  display: block;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.btn-grad:hover, body #reset:hover, body .popup #new-btn:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #ffffff;
+  text-decoration: none;
+}/*# sourceMappingURL=main.css.map */
